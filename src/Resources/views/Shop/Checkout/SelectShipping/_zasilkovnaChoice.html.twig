@@ -4,8 +4,11 @@
 
 	{% set zasilkovnaOptions = '{}' %}
 	{% if form.parent.parent['zasilkovna_' ~ method.code].vars.attr['data-country'] is defined and  form.parent.parent['zasilkovna_' ~ method.code].vars.attr['data-country'] is not empty %}
-		{% set zasilkovnaOptions = '{country: \'' ~ form.parent.parent['zasilkovna_' ~ method.code].vars.attr['data-country'] ~ '\'}' %}
+		{% set zasilkovnaOptions = '{country: \'' ~ form.parent.parent['zasilkovna_' ~ method.code].vars.attr['data-country'] ~ '\', weight: \'' ~ form.parent.parent['zasilkovna_' ~ method.code].vars.attr['data-max-weight'] ~ '\'}' %}
+	{% else %}
+		{% set zasilkovnaOptions = '{weight: \'' ~ form.parent.parent['zasilkovna_' ~ method.code].vars.attr['data-max-weight'] ~ '\'}' %}
 	{% endif %}
+
 
 	<div class="ui hidden divider"></div>
 	<div class="center aligned ui grid">

@@ -16,6 +16,7 @@ threebrs:
                 senderLabel: Sender label
                 carrierId: Carrier ID
                 syncAction: Sync Zásilkovna branches
+                maxWeight: Maximal weight what point accept
             export:
                 toZasilkovnaBranch: Zásilkovna Branch
                 toAddress: To address

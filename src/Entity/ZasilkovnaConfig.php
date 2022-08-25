@@ -13,85 +13,101 @@ use Sylius\Component\Resource\Model\ResourceInterface;
  */
 class ZasilkovnaConfig implements ResourceInterface, ZasilkovnaConfigInterface
 {
-    /**
-     * @var int|null
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     * @ORM\Column(type="integer", nullable=false)
-     */
-    protected $id;
+	/**
+	 * @var int|null
+	 * @ORM\Id
+	 * @ORM\GeneratedValue(strategy="IDENTITY")
+	 * @ORM\Column(type="integer", nullable=false)
+	 */
+	protected $id;
 
-    /**
-     * @var string|null
-     * @ORM\Column(type="string", nullable=true)
-     */
-    protected $apiKey;
+	/**
+	 * @var string|null
+	 * @ORM\Column(type="string", nullable=true)
+	 */
+	protected $apiKey;
 
-    /**
-     * @var string|null
-     * @ORM\Column(nullable=true, type="string")
-     */
-    private $senderLabel;
+	/**
+	 * @var string|null
+	 * @ORM\Column(nullable=true, type="string")
+	 */
+	private $senderLabel;
 
-    /**
-     * @var string|null
-     * @ORM\Column(nullable=true, type="string")
-     */
-    private $carrierId;
+	/**
+	 * @var string|null
+	 * @ORM\Column(nullable=true, type="string")
+	 */
+	private $carrierId;
 
-    /**
-     * @var string|null
-     * @ORM\Column(nullable=true, type="string")
-     */
-    private $optionCountry;
+	/**
+	 * @var int|null
+	 * @ORM\Column(nullable=false, type="integer")
+	 */
+	private $maxWeight;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+	/**
+	 * @var string|null
+	 * @ORM\Column(nullable=true, type="string")
+	 */
+	private $optionCountry;
 
-    public function setId(?int $id): void
-    {
-        $this->id = $id;
-    }
+	public function getId(): ?int
+	{
+		return $this->id;
+	}
 
-    public function getOptionCountry(): ?string
-    {
-        return $this->optionCountry;
-    }
+	public function setId(?int $id): void
+	{
+		$this->id = $id;
+	}
 
-    public function setOptionCountry(?string $optionCountry): void
-    {
-        $this->optionCountry = $optionCountry;
-    }
+	public function getMaxWeight(): ?int
+	{
+		return $this->maxWeight;
+	}
 
-    public function getApiKey(): ?String
-    {
-        return $this->apiKey;
-    }
+	public function setMaxWeight(?int $maxWeight): void
+	{
+		$this->maxWeight = $maxWeight;
+	}
 
-    public function setApiKey(?String $apiKey): void
-    {
-        $this->apiKey = $apiKey;
-    }
+	public function getOptionCountry(): ?string
+	{
+		return $this->optionCountry;
+	}
 
-    public function getSenderLabel(): ?string
-    {
-        return $this->senderLabel;
-    }
+	public function setOptionCountry(?string $optionCountry): void
+	{
+		$this->optionCountry = $optionCountry;
+	}
 
-    public function setSenderLabel(?string $senderLabel): void
-    {
-        $this->senderLabel = $senderLabel;
-    }
+	public function getApiKey(): ?string
+	{
+		return $this->apiKey;
+	}
 
-    public function getCarrierId(): ?string
-    {
-        return $this->carrierId;
-    }
+	public function setApiKey(?string $apiKey): void
+	{
+		$this->apiKey = $apiKey;
+	}
 
-    public function setCarrierId(?string $carrierId): void
-    {
-        $this->carrierId = $carrierId;
-    }
+	public function getSenderLabel(): ?string
+	{
+		return $this->senderLabel;
+	}
+
+	public function setSenderLabel(?string $senderLabel): void
+	{
+		$this->senderLabel = $senderLabel;
+	}
+
+	public function getCarrierId(): ?string
+	{
+		return $this->carrierId;
+	}
+
+	public function setCarrierId(?string $carrierId): void
+	{
+		$this->carrierId = $carrierId;
+	}
 }

@@ -51,6 +51,10 @@ final class ZasilkovnaConfigType extends AbstractResourceType
                 'label' => 'threebrs.admin.zasilkovna.form.carrierId',
                 'required' => false,
             ])
+            ->add('maxWeight', TextType::class, [
+                'label' => 'threebrs.admin.zasilkovna.form.maxWeight',
+                'required' => true,
+            ])
         ;
     }
 

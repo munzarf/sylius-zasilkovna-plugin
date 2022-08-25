@@ -106,6 +106,7 @@ class ShipmentZasilkovnaExtension extends AbstractTypeExtension
                                     'data-api-key' => $zasilkovnaConfig->getApiKey(),
                                     'data-country' => $zasilkovnaConfig->getOptionCountry(),
                                     'data-label' => $dataLabel,
+                                    'data-max-weight' => $zasilkovnaConfig->getMaxWeight(),
                                 ],
                                 'data' => $data,
                                 'required' => false,
