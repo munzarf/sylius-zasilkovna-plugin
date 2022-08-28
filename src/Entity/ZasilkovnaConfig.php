@@ -41,7 +41,7 @@ class ZasilkovnaConfig implements ResourceInterface, ZasilkovnaConfigInterface
 
 	/**
 	 * @var int|null
-	 * @ORM\Column(nullable=false, type="integer")
+	 * @ORM\Column(nullable=true, type="integer")
 	 */
 	private $maxWeight;
 
