@@ -6,7 +6,7 @@
 	"repositories": [
 	{
 	    "type": "vcs",
-	    "url": "https://github.com/petrhamak/sylius-shipment-export-plugin"
+	    "url": "https://github.com/munzarf/sylius-shipment-export-plugin"
 	}],
 	"require": {
 		"ext-json": "*",
